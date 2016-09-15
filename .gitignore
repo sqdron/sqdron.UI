@@ -1,0 +1,25 @@
+/node_modules/
+/dist/
+/npm-debug.log
+/.idea
+.idea/
+
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
+.idea/
+bower_components/
+node_modules/
+dist/
+coverage/*
+
+# Sensitive or high-churn files:
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml

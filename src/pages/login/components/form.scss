@@ -1,0 +1,17 @@
+:local(.form){
+    margin-bottom: 48px;
+}
+
+:local(.container){
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after{
+        clear: both;
+    }
+}
+
+:local(.container .login-input) {
+    margin-bottom: 20px;
+}

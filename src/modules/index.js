@@ -1,5 +1,5 @@
-export const accept = (store)=>{
+export const accept = (store) => {
 
 }
 
-export default accept;
+export default accept

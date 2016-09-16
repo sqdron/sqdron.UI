@@ -1,17 +1,7 @@
-import configurator from './configurator'
-import { applyMiddleware, compose, createStore } from 'redux'
+import { applyMiddleware, compose, createStore, combineReducers } from 'redux'
 import { routerMiddleware, routerReducer as router } from 'react-router-redux'
 import thunk from 'redux-thunk'
 import DevTools from '../containers/development'
-import { combineReducers } from 'redux'
-
-export const create = (initialState = {}, history) => {
-  let configuration = configurator()
-  require('./configure.dev')(configuration)
-  // require('./configure.reduce')(configuration)
-  // require('./configure.reduce')(configuration)
-  return configuration.create(initialState)
-}
 
 export default (initialState = {}, history) => {
   // ======================================================
@@ -38,7 +28,7 @@ export default (initialState = {}, history) => {
   // Store Instantiation and HMR Setup
   // ======================================================
   const store = createStore(
-    combineReducers({router}),
+    combineReducers({ router }),
     initialState,
     compose(
       applyMiddleware(...middleware),

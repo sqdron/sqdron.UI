@@ -1,10 +1,10 @@
 import React from 'react'
-import RaisedButton from 'material-ui/RaisedButton';
+import RaisedButton from 'material-ui/RaisedButton'
 
 export const Landing = () => (
   <div>
     <h4>Welcome!</h4>
-    <RaisedButton label="Default" />
+    <RaisedButton label='Default' />
   </div>
 )
 

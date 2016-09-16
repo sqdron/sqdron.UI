@@ -13,7 +13,7 @@ export const RoutingModule = (basename) => {
     })
 
     ctx.history = history
-    ctx.middleware = [...ctx.middleware, routerMiddleware(history)]
+    ctx.middlewares = [...ctx.middlewares, routerMiddleware(history)]
   }
 }
 

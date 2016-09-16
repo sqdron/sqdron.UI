@@ -1,6 +1,6 @@
 import injectTapEventPlugin from 'react-tap-event-plugin'
 import App from './app/app'
-import RoutingModule from './app/app.routing'
+import {RoutingModule, StoreModule} from './app'
 
 injectTapEventPlugin()
 
@@ -21,5 +21,5 @@ injectTapEventPlugin()
 //
 var app = new App()
 app.use(RoutingModule(__BASENAME__))
-//
+app.use(StoreModule(window.___INITIAL_STATE__))
 app.run()

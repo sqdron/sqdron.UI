@@ -4,11 +4,12 @@ export default class {
    *
    * @api public
    */
-  constructor () {
+  constructor() {
     this.context = {}
-    this.renderFunc = (ctx) => {
+    this.context.middlewares = []
+    this.module = (ctx) => {
     }
-    this.middleware = (ctx) => {
+    this.renderFunc = (ctx) => {
     }
   }
 
@@ -16,8 +17,8 @@ export default class {
     this.renderFunc(this.context)
   }
 
-  use = (m) => {
-    // this.middleware = compose(this.middleware, m)
+  use = (...module) => {
+    this.module = compose(this.module, ...module)
   }
 
   run = () => {
@@ -25,7 +26,7 @@ export default class {
   }
 }
 
-function compose (...funcs) {
+function compose(...funcs) {
   if (funcs.length === 0) {
     return arg => arg
   }

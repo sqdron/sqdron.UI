@@ -2,18 +2,20 @@ import { routerMiddleware } from 'react-router-redux'
 import { useRouterHistory } from 'react-router'
 import createBrowserHistory from 'history/lib/createBrowserHistory'
 
-// import Application from './app'
-export const RoutingModule = (basename) => {
-  return (ctx) => {
-    // ========================================================
-    // Browser History Setup
-    // ========================================================
-    const history = useRouterHistory(createBrowserHistory)({
-      basename : basename
-    })
-
-    ctx.history = history
-    ctx.middlewares = [...ctx.middlewares, routerMiddleware(history)]
+export const RoutingModule = (basename, getRoutes) => {
+  return {
+    init : (ctx) => {
+      console.log('Initialize Routing...')
+      ctx.browserHistory = useRouterHistory(createBrowserHistory)({
+        basename : basename
+      })
+      ctx.getRoutes = getRoutes
+    },
+    run : (ctx) => {
+      console.log('Initialize Routing...')
+      // ctx.reduce(router)
+      ctx.middlewares = [...ctx.middlewares, routerMiddleware(ctx.browserHistory)]
+    }
   }
 }
 

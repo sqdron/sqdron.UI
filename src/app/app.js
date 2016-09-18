@@ -6,23 +6,22 @@ export default class {
    */
   constructor() {
     this.context = {}
-    this.context.middlewares = []
-    this.module = (ctx) => {
-    }
-    this.renderFunc = (ctx) => {
-    }
+    this.modulesInit = (ctx) => {}
+    this.modulesRun = (ctx) => {}
   }
 
-  render = () => {
-    this.renderFunc(this.context)
-  }
-
-  use = (...module) => {
-    this.module = compose(this.module, ...module)
+  use = (module) => {
+    if (module.init) {
+      this.modulesInit = compose(module.init, this.modulesInit)
+    }
+    if (module.run) {
+      this.modulesRun = compose(module.run, this.modulesRun)
+    }
   }
 
   run = () => {
-    // this.middleware(this.context)
+    this.modulesInit(this.context)
+    this.modulesRun(this.context)
   }
 }
 
@@ -37,5 +36,5 @@ function compose(...funcs) {
 
   const last = funcs[funcs.length - 1]
   const rest = funcs.slice(0, -1)
-  return (...args) => rest.reduceRight((composed, f) => f(composed), last(...args))
+  return (...args) => rest.reduceRight((composed, f) => f(...args), last(...args))
 }

@@ -1,3 +1,6 @@
 export App from './app'
-export RoutingModule from './app.store'
+export RoutingModule from './app.routing'
 export StoreModule from './app.store'
+export RenderModule from './app.render'
+export DevModule from './app.dev'
+export HotModule from './app.hot'

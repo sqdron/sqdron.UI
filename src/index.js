@@ -1,25 +1,29 @@
+import ReactDOM from 'react-dom'
+
 import injectTapEventPlugin from 'react-tap-event-plugin'
 import App from './app/app'
-import {RoutingModule, StoreModule} from './app'
+import { StoreModule, RoutingModule, RenderModule, DevModule, HotModule } from './app'
 
 injectTapEventPlugin()
 
-// // ========================================================
-// // Browser History Setup
-// // ========================================================
-// /*
-//  * 1. Create History
-//  * 2. Setup Middleware
-//  * 3. Setup Enchancers
-//  * 4. Setup Reducers
-//  * 5. Create Store
-//  * 5. Debug Mode
-//  * 6. Dev Mode
-//  * 7. Hot Reload
-//  * 8. Render
-//  * */
-//
+const MOUNT_NODE = document.getElementById('root')
+
 var app = new App()
-app.use(RoutingModule(__BASENAME__))
+
+app.use(RoutingModule(__BASENAME__, () => require('./pages/index').default))
 app.use(StoreModule(window.___INITIAL_STATE__))
+
+app.use(RenderModule((view) => {
+  ReactDOM.unmountComponentAtNode(MOUNT_NODE)
+  ReactDOM.render(view, MOUNT_NODE)
+}))
+
+app.use(DevModule(window.devToolsExtension))
+
+app.use(HotModule((ctx) => {
+  if (module.hot) {
+    module.hot.accept('./pages/index', () => { ctx.render(ctx) })
+  }
+}))
+
 app.run()

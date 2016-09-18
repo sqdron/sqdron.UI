@@ -47,8 +47,6 @@ if (__DEBUG__) {
 const MOUNT_NODE = document.getElementById('root')
 
 let render = () => {
-  // const routes = require('./routes/index').default(store)
-
   const routes = require('./pages/index').default()
   ReactDOM.render(
     <Application
@@ -63,28 +61,12 @@ let render = () => {
 // This code is excluded from production bundle
 if (__DEV__) {
   if (module.hot) {
-    // Development render functions
-    const renderApp = render
-    const renderError = (error) => {
-      const RedBox = require('redbox-react').default
-
-      ReactDOM.render(<RedBox error={error}/>, MOUNT_NODE)
-    }
-
-    // Wrap render in try/catch
-    render = () => {
-      try {
-        renderApp()
-      } catch (error) {
-        renderError(error)
-      }
-    }
-
     // Setup hot module replacement
     module.hot.accept('./pages/index', () => {
       setTimeout(() => {
-        ReactDOM.unmountComponentAtNode(MOUNT_NODE)
-        render()
+        console.log('Do reload ')
+        // ReactDOM.unmountComponentAtNode(MOUNT_NODE)
+        // render()
       })
     })
   }

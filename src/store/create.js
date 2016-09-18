@@ -35,11 +35,11 @@ export default (initialState = {}, history) => {
       ...enhancers
     )
   )
-  if (module.hot) {
-    module.hot.accept('./configure.reduce', () => {
-      // const reducers = require('./reducers').default
-      store.reload()
-    })
-  }
+  // if (module.hot) {
+  //   module.hot.accept('./configure.reduce', () => {
+  //     // const reducers = require('./reducers').default
+  //     store.reload()
+  //   })
+  // }
   return store
 }

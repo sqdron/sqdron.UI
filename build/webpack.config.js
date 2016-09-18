@@ -24,7 +24,7 @@ const webpackConfig = {
 // Entry Points
 // ------------------------------------
 const APP_ENTRY_PATHS = [
-  paths.client('main.js')
+  paths.client('index.js')
 ]
 
 webpackConfig.entry = {
@@ -126,7 +126,7 @@ webpackConfig.module.loaders = [{
   loader  : 'babel',
   query   : {
     cacheDirectory : true,
-    plugins        : ['transform-runtime'],
+    plugins        : ['transform-runtime', 'lodash'],
     presets        : ['es2015', 'react', 'stage-0']
   }
 },

@@ -1,26 +1,36 @@
 import React, { Component, PropTypes } from 'react'
 import { Router } from 'react-router'
 import { Provider } from 'react-redux'
-import DevTools from './development'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import _ from 'lodash'
 
 class Application extends Component {
   static propTypes = {
     history : PropTypes.object.isRequired,
+    store   : PropTypes.object.isRequired,
     routes  : PropTypes.object.isRequired,
-    store   : PropTypes.object.isRequired
+    assets  : PropTypes.array
   }
+  render() {
+    const { history, store, routes, assets } = this.props
+    console.log(routes)
+    var renderAssets = ''
+    if (assets) {
+      renderAssets = _.reduce(assets, (res, value) => {
+        renderAssets += value
+      })
+    }
+    // console.log('rt')
+    // var rt = require('../pages/index').default()
+    // console.log(rt)
 
-  render () {
-    const { history, routes, store } = this.props
-    const devAssets = (__DEV__) ? <DevTools/> : ''
     return (
       <Provider store={store}>
         <div className='main-container'>
           <MuiThemeProvider>
             <Router history={history} children={routes}/>
           </MuiThemeProvider>
-          {devAssets}
+          {renderAssets}
         </div>
       </Provider>
     )

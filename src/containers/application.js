@@ -20,10 +20,6 @@ class Application extends Component {
         renderAssets += value
       })
     }
-    // console.log('rt')
-    // var rt = require('../pages/index').default()
-    // console.log(rt)
-
     return (
       <Provider store={store}>
         <div className='main-container'>

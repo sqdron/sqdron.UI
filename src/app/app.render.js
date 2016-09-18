@@ -21,22 +21,3 @@ export const RenderModule = (render) => {
   }
 }
 export default RenderModule
-
-// export const RenderModule = (render) => {
-//   return {
-//     init : (ctx) => {
-//       console.log('Initialize Rendering...')
-//       ctx.render = render
-//       ctx.renderAssets = []
-//     },
-//     run : (ctx) => {
-//       console.log('Run Rendering...')
-//       const routes = require('./pages/index').default()
-//
-//       // render(ctx, <application store={ctx.store} history={ctx.history} assets={ctx.renderAssets}
-//       //   routes={ctx.getRoutes()}/>)
-//       // render(ctx, null)
-//     }
-//   }
-// }
-// export default RenderModule

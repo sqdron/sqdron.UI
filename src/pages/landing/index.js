@@ -1,8 +1,9 @@
 import React from 'react'
+import { Header } from './components'
 
 export const Landing = () => (
   <div>
-    <p>Welcome!</p>
+    <Header/>
   </div>
 )
 

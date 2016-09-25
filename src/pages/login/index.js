@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './classes.scss'
+import classes from './classes.css'
 import { Header, Form } from './components'
 
 export const Login = () => (

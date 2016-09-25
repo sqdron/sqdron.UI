@@ -1,0 +1,17 @@
+.form {
+    margin-bottom: 48px;
+}
+
+.container {
+    /*&:before, &:after {*/
+        /*content: " ";*/
+        /*display: table;*/
+    /*}*/
+    /*&:after{*/
+        /*clear: both;*/
+    /*}*/
+}
+
+.container .login-input {
+    margin-bottom: 20px;
+}

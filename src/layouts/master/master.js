@@ -1,6 +1,7 @@
-import React from 'react'
-import classes from './master.scss'
-import '../../styles/core.scss'
+import React, { PropTypes } from 'react'
+import '../../styles/next.css'
+import classes from './master.css'
+import '../../styles/core.css'
 
 export const Master = ({ children }) => (
   <div className={classes.masterContainer}>
@@ -9,7 +10,7 @@ export const Master = ({ children }) => (
 )
 
 Master.propTypes = {
-  children : React.PropTypes.element.isRequired
+  children : PropTypes.node
 }
 
 export default Master

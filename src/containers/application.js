@@ -11,7 +11,8 @@ class Application extends Component {
     routes  : PropTypes.object.isRequired,
     assets  : PropTypes.array
   }
-  render() {
+
+  render () {
     const { history, store, routes, assets } = this.props
     console.log(routes)
     var renderAssets = ''

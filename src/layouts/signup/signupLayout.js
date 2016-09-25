@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './signupLayout.scss'
+import classes from './signupLayout.css'
 import '../../styles/core.scss'
 
 export const Master = ({ children }) => (

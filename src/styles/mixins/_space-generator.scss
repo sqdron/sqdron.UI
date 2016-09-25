@@ -1,0 +1,29 @@
+@mixin generate-space($spaceamounts, $step, $position, $type) {
+    $p: 't' !default;
+    @if $position == 'top' {
+        $p: 't';
+    } @else if $position == 'right' {
+        $p: 'r';
+    } @else if $position == 'bottom' {
+        $p: 'b';
+    } @else if $position == 'left' {
+        $p: 'l';
+    }
+
+    $t: p !default;
+    @if $type == 'margin' {
+        $t: 'm';
+    }
+
+    @each $space in $spaceamounts {
+        .#{$t}-#{$p}-#{$space} {
+            #{$type}-#{$position}: #{$space*$step}px;
+        }
+        //@debug (#{$t}-#{$p}-#{$space})
+    }
+}
+
+$spaceamounts: (1, 2, 3, 4, 5, 6);
+
+@include generate-space($spaceamounts, 10, 'bottom', 'padding')
+@include generate-space($spaceamounts, 10, 'top', 'padding')

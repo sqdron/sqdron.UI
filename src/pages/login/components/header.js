@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './header.scss'
+import classes from './header.css'
 
 export default () => (
   <div className={classes.header}>

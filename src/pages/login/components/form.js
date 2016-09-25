@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './form.scss'
+import classes from './form.css'
 import TextField from 'material-ui/TextField'
 
 export default () => (

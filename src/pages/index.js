@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 import { Master } from '../layouts'
-import { Landing } from './landing'
+import Landing from './landing'
 import { NotFound } from './notFound'
 import { Login } from './login'
 

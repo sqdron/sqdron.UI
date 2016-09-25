@@ -40,19 +40,28 @@ const config = {
   compiler_public_path     : '/',
   compiler_stats           : {
     chunks : false,
-    chunkModules : false,
+    chunkModules : true,
     colors : true
   },
   compiler_vendor : [
-    'babel-polyfill',
+    'jquery',
+    'tether',
+    'bootstrap',
     'history',
     'react',
+    'react-dom',
     'react-redux',
     'react-router',
     'react-router-redux',
-    'redux'
+    'react-tap-event-plugin',
+    'redux',
+    'redux-thunk',
+    'history',
+    'lodash',
+    'webpack-material-design-icons',
+    'material-ui',
+    'material-design-icons'
   ],
-
   // ----------------------------------
   // Test Configuration
   // ----------------------------------

@@ -1,0 +1,4 @@
+@import "../../../../styles/next.css";
+:local(.section_1) {
+   padding-top: var(--header-height);
+}

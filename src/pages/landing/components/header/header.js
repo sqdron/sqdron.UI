@@ -4,10 +4,10 @@ import './header.pcss'
 const Header = ({ minimized }) => (
   <nav className={'navbar navbar-light bg-faded scrolling-navbar navbar-fixed-top ' +
     (minimized ? ' navbar-minimized' : '')}>
-      <a className='navbar-toggler hidden-md-up'
-        data-toggle='collapse' data-target='#collapsingNavbar'>
-        <span className='sr-only'>Toggle navigation</span> <i className='material-icons'>dehaze</i>
-      </a>
+    <a className='navbar-toggler hidden-md-up'
+      data-toggle='collapse' data-target='#collapsingNavbar'>
+      <span className='sr-only'>Toggle navigation</span> <i className='material-icons'>dehaze</i>
+    </a>
     <div className='container'>
       <div className='navbar-header'>
         <a href='index.html' className='navbar-brand'>

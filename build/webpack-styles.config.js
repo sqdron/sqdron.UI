@@ -38,6 +38,7 @@ export default (webpackConfig, config) => {
   webpackConfig.postcss = (webpack) => {
     return [
       require('precss')(),
+      require('postcss-utilities')(),
       require('postcss-import')({ addDependencyTo: webpack }),
       require('postcss-url')(),
       require('postcss-cssnext')(),

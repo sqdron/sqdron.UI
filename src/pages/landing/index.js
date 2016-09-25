@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Header, Section1, Section2 } from './components'
+import { Header, Section0, Section1, Section2 } from './components'
 import './landing.css'
 
 class Landing extends Component {
@@ -30,6 +30,7 @@ class Landing extends Component {
     return (
       <div>
         <Header minimized={this.state.minimizedBar}/>
+        <Section0/>
         <Section1/>
         <Section2/>
       </div>

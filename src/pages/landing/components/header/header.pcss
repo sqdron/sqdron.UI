@@ -1,123 +1,121 @@
 @import "../../../../styles/next.css";
+/*TODO: Refactor The code below is from an old theme template*/
 :global {
-    .navbar {
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        border: none;
-        border-radius: 0;
-        color: var(--c-white);
+  .navbar {
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border: none;
+    border-radius: 0;
+    color: var(--c-white);
+    height: var(--header-height);
+    background: transparent;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.04);
+    padding-bottom: 0px;
+    padding-top: 0px;
+
+    .scrolling-navbar {
+      transition: background 0.5s ease-in-out 0s, padding 0.5s ease-in-out 0s;
+    }
+
+    a {
+      color: var(--c-white) !important;
+    }
+
+    .navbar-toggler {
+      position: absolute;
+      left: 0;
+      top: 0;
+      float: none;
+      text-align: center;
+      border: none;
+    }
+
+    .navbar-header {
+      z-index: 10;
+      position: relative !important;
+      text-align: center;
+
+      a {
+        padding: 0;
         height: var(--header-height);
-        background: transparent;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.04);
-        padding-bottom: 0px;
-        padding-top: 0px;
+        line-height: var(--header-height) !important;
+      }
 
-        .scrolling-navbar {
-            transition: background 0.5s ease-in-out 0s, padding 0.5s ease-in-out 0s;
+      .navbar-brand {
+
+        img {
+          display: inline-block;
+          padding-bottom: 3px;
         }
-
-        a {
-            color: var(--c-white) !important;
-        }
-
-        .navbar-toggler {
-            position: absolute;
-            left: 0;
-            top: 0;
-            float: none;
-            text-align: center;
-            border: none;
-        }
-
-        .navbar-header {
-            z-index: 10;
-            position: relative !important;
-            text-align: center;
-
-            a {
-                padding: 0;
-                height: var(--header-height);
-                line-height: var(--header-height) !important;
-            }
-
-            .navbar-brand {
-
-                img {
-                    display: inline-block;
-                    padding-bottom: 3px;
-                }
-            }
-        }
-
-        .navbar-nav {
-            .nav-item {
-                color: var(--c-white);
-                font-size: 14px;
-                text-transform: uppercase;
-                line-height: var(--header-height);
-
-                &.active, &:hover {
-                    /*color: $ red;*/
-
-                }
-                .nav-link {
-                    color: var(--c-white);
-                    font-size: 16px;
-                    text-transform: uppercase;
-                    padding-top: 0;
-                    padding-bottom: 0;
-                    .active, &:hover {
-                    }
-                }
-            }
-        }
-
-        &.navbar-minimized {
-            height: var(--header-height-small);
-            background: #1aaaf8;
-            a {
-                height: var(--header-height-small) !important;
-                line-height: var(--header-height-small) !important;
-            }
-        }
-    }
-
-    @media (--l-viewport) {
-        .navbar {
-            transition: all 0.5s;
-            .navbar-header {
-                transition: all 0.5s;
-            }
-        }
-    }
-
-    @media (--s-viewport) {
-    .navbar {
-        background: rgba(255, 255, 255, 0.1);
-        height: var(--header-height-small);
-
-        transition: height 0.5s, background 0.6s;
-        > .container {
-            width: auto !important;
-        }
-
-        .navbar-header {
-            transition: all 0.5s;
-            a {
-                height: var(--header-height-small);
-                line-height: var(--header-height-small) !important;
-            }
-            .navbar-brand {
-                float: none;
-            }
-        }
+      }
     }
 
     .navbar-nav {
-        background: rgba(255, 255, 255, 0.1);
-        position: absolute;
-        /*left: 0;*/
+      .nav-item {
+        color: var(--c-white);
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: var(--header-height);
+
+        &.active, &:hover {
+          /*color: $ red;*/
+
+        }
+        .nav-link {
+          color: var(--c-white);
+          font-size: 16px;
+          text-transform: uppercase;
+          padding-top: 0;
+          padding-bottom: 0;
+          .active, &:hover {
+          }
+        }
+      }
     }
+
+    &.navbar-minimized {
+      height: var(--header-height-small);
+      background: #1aaaf8;
+      a {
+        height: var(--header-height-small) !important;
+        line-height: var(--header-height-small) !important;
+      }
+    }
+  }
+
+  @media (--l-viewport) {
+    .navbar {
+      transition: all 0.5s;
+      .navbar-header {
+        transition: all 0.5s;
+      }
+    }
+  } @media (--s-viewport) {
+  .navbar {
+    background: rgba(255, 255, 255, 0.1);
+    height: var(--header-height-small);
+
+    transition: height 0.5s, background 0.6s;
+    > .container {
+      width: auto !important;
+    }
+
+    .navbar-header {
+      transition: all 0.5s;
+      a {
+        height: var(--header-height-small);
+        line-height: var(--header-height-small) !important;
+      }
+      .navbar-brand {
+        float: none;
+      }
+    }
+  }
+
+  .navbar-nav {
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+  }
 }
 }

@@ -10,7 +10,7 @@ export default () => (
       <div className={styles.row} >
         <TextInput floatingLabelText='Sqdron ID' fullWidth className='col-xs-12'/>
         <TextInput floatingLabelText='Email' fullWidth className='col-xs-12'/>
-        <RaisedButton label='Sign UP'  backgroundColor={Colors.lightBlue200}/>
+        <RaisedButton label='Sign UP' backgroundColor={Colors.lightBlue200}/>
       </div>
     </form>
   </div>

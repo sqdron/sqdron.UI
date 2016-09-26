@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Header, Section0, Section1, Section2 } from './components'
-import './landing.css'
+import { Header, Section0, Section1 } from './components'
 
 class Landing extends Component {
   constructor () {
@@ -32,7 +31,6 @@ class Landing extends Component {
         <Header minimized={this.state.minimizedBar}/>
         <Section0/>
         <Section1/>
-        <Section2/>
       </div>
     )
   }

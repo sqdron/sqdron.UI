@@ -1,5 +1,6 @@
 import React from 'react'
 import './header.pcss'
+import { Link } from 'react-router'
 
 const Header = ({ minimized }) => (
   <nav className={'navbar navbar-light bg-faded scrolling-navbar navbar-fixed-top ' +
@@ -27,6 +28,9 @@ const Header = ({ minimized }) => (
           </li>
           <li className='nav-item'>
             <a className='nav-link' href='#'>About</a>
+          </li>
+          <li className='nav-item'>
+            <li><Link to='/login' >Login to sqdron</Link></li>
           </li>
         </ul>
       </div>

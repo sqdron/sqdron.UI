@@ -20,16 +20,16 @@ export default (webpackConfig, config) => {
       'postcss'
     ]
   })
-  //
-  // webpackConfig.module.loaders.push({
-  //   test    : /\.scss$/,
-  //   loaders : [
-  //     'style',
-  //     CSS_LOADER,
-  //     'postcss',
-  //     'sass'
-  //   ]
-  // })
+
+  webpackConfig.module.loaders.push({
+    test    : /\.scss$/,
+    loaders : [
+      'style',
+      CSS_LOADER,
+      'postcss',
+      'sass'
+    ]
+  })
 
   webpackConfig.sassLoader = {
     includePaths : paths.client('styles')
@@ -38,6 +38,7 @@ export default (webpackConfig, config) => {
   webpackConfig.postcss = (webpack) => {
     return [
       require('precss')(),
+      require('postcss-local-scope')(),
       require('postcss-utilities')(),
       require('postcss-import')({ addDependencyTo: webpack }),
       require('postcss-url')(),

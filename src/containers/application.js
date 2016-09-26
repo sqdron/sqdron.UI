@@ -3,18 +3,14 @@ import { Router } from 'react-router'
 import { Provider } from 'react-redux'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import _ from 'lodash'
-import { cyan500, cyan700,
-  pinkA200,
-  grey100, grey300, grey400, grey500,
-  white, darkBlack, fullBlack } from 'material-ui/styles/colors'
-// import { fade } from '../../utils/colorManipulator'
+import { grey300, lightBlue500, white, fullBlack } from 'material-ui/styles/colors'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
 const muiTheme = getMuiTheme({
   palette : {
     textColor          : white,
     primary1Color      : white,
-    primary2Color      : white,
+    primary2Color      : lightBlue500,
     primary3Color      : white,
     accent1Color       : white,
     accent2Color       : white,
@@ -22,7 +18,7 @@ const muiTheme = getMuiTheme({
     alternateTextColor : white,
     canvasColor        : white,
     borderColor        : grey300,
-    pickerHeaderColor  : cyan500,
+    pickerHeaderColor  : white,
     shadowColor        : fullBlack
   },
   textField : {

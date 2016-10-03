@@ -60,7 +60,8 @@ const config = {
     'lodash',
     'webpack-material-design-icons',
     'material-ui',
-    'material-design-icons'
+    'material-design-icons',
+    'flexboxgrid'
   ],
   // ----------------------------------
   // Test Configuration

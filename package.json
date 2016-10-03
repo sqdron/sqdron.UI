@@ -17,9 +17,9 @@
     "dev:no-debug": "npm run dev -- --no_debug",
     "test": "better-npm-run test",
     "test:dev": "npm run test -- --watch",
-    "deploy": "better-npm-run deploy",
-    "deploy:dev": "better-npm-run deploy:dev",
-    "deploy:prod": "better-npm-run deploy:prod",
+    "build": "better-npm-run build",
+    "build:dev": "better-npm-run build:dev",
+    "build:prod": "better-npm-run build:prod",
     "codecov": "cat coverage/*/lcov.info | codecov"
   },
   "betterScripts": {
@@ -36,21 +36,21 @@
         "DEBUG": "app:*"
       }
     },
-    "deploy": {
+    "build": {
       "command": "npm run lint && npm run test && npm run clean && npm run compile",
       "env": {
         "DEBUG": "app:*"
       }
     },
-    "deploy:dev": {
-      "command": "npm run deploy",
+    "build:dev": {
+      "command": "npm run build",
       "env": {
         "NODE_ENV": "development",
         "DEBUG": "app:*"
       }
     },
-    "deploy:prod": {
-      "command": "npm run deploy",
+    "build:prod": {
+      "command": "npm run build",
       "env": {
         "NODE_ENV": "production",
         "DEBUG": "app:*"
@@ -78,8 +78,10 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.4",
+    "classnames": "^2.2.5",
     "compass": "^0.1.1",
     "compass-mixins": "^0.12.10",
+    "flexboxgrid": "^6.3.1",
     "history": "^2.0.0",
     "jquery": "^3.1.0",
     "lodash": "^4.15.0",
@@ -88,6 +90,7 @@
     "normalize.css": "^4.1.1",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
+    "react-flexbox-grid": "^0.10.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.2.0",
     "react-router-redux": "^4.0.0",

@@ -7,8 +7,8 @@ export default () => (
     <div className='container'>
       <div className='row'>
         <div className={'col-md-7 ' + styles.title}>
-          <h2 className='text-center'>Sqdron Solutions</h2>
-          <span className='text-center'>Software Development</span>
+          <h2 className='text-center'>Sqdron</h2>
+          <span className='text-center'>Application Delivery Management</span>
         </div>
         <Signup/>
       </div>

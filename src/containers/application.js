@@ -9,16 +9,16 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
 const muiTheme = getMuiTheme({
   palette : {
-    primary1Color : Colors.white,
-    primary2Color : Colors.lightBlue700,
-    primary3Color : Colors.lightBlue100,
-    accent1Color  : Colors.white,
-    accent2Color  : Colors.white,
-    accent3Color  : Colors.white,
-    textColor     : Colors.fullWhite,
-    canvasColor   : '#303030',
-    borderColor   : ColorManipulator.fade(Colors.fullWhite, 0.3),
-    disabledColor : ColorManipulator.fade(Colors.fullWhite, 0.5)
+    // primary1Color : Colors.white,
+    // primary2Color : Colors.lightBlue700,
+    // primary3Color : Colors.lightBlue100,
+    // accent1Color  : Colors.white,
+    // accent2Color  : Colors.white,
+    // accent3Color  : Colors.white,
+    // textColor     : Colors.fullWhite,
+    // canvasColor   : '#303030',
+    // borderColor   : ColorManipulator.fade(Colors.fullWhite, 0.3),
+    // disabledColor : ColorManipulator.fade(Colors.fullWhite, 0.5)
   },
   textField : {
   }

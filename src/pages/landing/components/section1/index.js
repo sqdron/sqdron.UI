@@ -1,7 +1,9 @@
 import React from 'react'
+import styles from './styles.pcss'
 
+// 'container-fluid container-fullw bg-white'
 export default () => (
-  <section id='section1' className='container-fluid container-fullw bg-white'>
+  <section id='section1' className={styles.section1}>
     <div className='container'>
       <div className='row'>
         <div className='col-md-12'>

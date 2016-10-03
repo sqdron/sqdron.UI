@@ -30,7 +30,7 @@ const Header = ({ minimized }) => (
             <a className='nav-link' href='#'>About</a>
           </li>
           <li className='nav-item'>
-            <li><Link to='/login' >Login to sqdron</Link></li>
+            <Link to='/login' >Login to sqdron</Link>
           </li>
         </ul>
       </div>

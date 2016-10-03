@@ -1,7 +1,7 @@
 @import "../../styles/next.css";
 :global {
-    .masterContainer {
-        height: 100%;
-        min-height: 620px;
-    }
+.masterContainer {
+    height: 100%;
+    min-height: 620px;
+}
 }

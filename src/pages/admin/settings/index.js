@@ -4,16 +4,15 @@ import HardwareProviders from './hardwareProviders'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 
 export const Settings = () => (
-  <div>
+  <Grid>
     <Row>
-      <Col xs={12} sm={3} md={2} lg={1} />
-      <Col xs={6} sm={6} md={8} lg={10} />
-      <Col xs={6} sm={3} md={2} lg={1} />
+      <Col xs={0} sm={0} md={4} lg={2}/>
+      <Col xs={12} sm={12} md={8} lg={10}>
+        <SourceProviders/>
+        <HardwareProviders/>
+      </Col>
     </Row>
-
-    <SourceProviders/>
-    <HardwareProviders/>
-  </div>
+  </Grid>
 )
 
 export default Settings

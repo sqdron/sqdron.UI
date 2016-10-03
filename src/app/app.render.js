@@ -17,6 +17,7 @@ export const RenderModule = (render) => {
           routes={routes}/>)
       }
       ctx.render()
+      ctx.reload()
     }
   }
 }

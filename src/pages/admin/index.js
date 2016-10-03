@@ -38,11 +38,11 @@ class Admin extends React.Component {
         <Link to='/admin/repository'><MenuItem primaryText='Repository' onTouchTap={this.handleClose}
           leftIcon={<Folder />}/></Link>
         <Link to='/admin/applications'><MenuItem primaryText='Applications' onTouchTap={this.handleClose}
-                                               leftIcon={<Applications />}/></Link>
+          leftIcon={<Applications />}/></Link>
         <Link to='/admin/hardware'><MenuItem primaryText='Hardware' onTouchTap={this.handleClose}
-                                             leftIcon={<Storage />}/></Link>
+          leftIcon={<Storage />}/></Link>
         <Link to='/admin/settings'><MenuItem primaryText='Settings' onTouchTap={this.handleClose}
-                                             leftIcon={<Settings />}/></Link>
+          leftIcon={<Settings />}/></Link>
       </Drawer>
       <AppBar title='sqdron' onLeftIconButtonTouchTap={this.handleToggle}/>
       {children}
@@ -52,6 +52,6 @@ class Admin extends React.Component {
 
 Admin.childContextTypes = {
   children : React.PropTypes.object.isRequired
-};
+}
 
 export default Admin

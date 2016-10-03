@@ -34,6 +34,7 @@ body {
     font-size: 13px;
 }
 
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
 @import '../../node_modules/webpack-material-design-icons/material-design-icons.css';
 @import '../../node_modules/tether/dist/css/tether.min.css';
 @import '../../node_modules/tether/dist/css/tether-theme-basic.min.css';

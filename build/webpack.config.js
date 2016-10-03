@@ -67,7 +67,9 @@ webpackConfig.plugins = [
     jQuery          : 'jquery',
     Tether          : 'tether',
     'window.jQuery' : 'jquery',
-    'window.Tether' : 'tether'
+    'window.Tether' : 'tether',
+    'Promise'       : 'es6-promise',
+    'fetch'         : 'imports?this=>global!exports?global.fetch!whatwg-fetch'
   })
 ]
 

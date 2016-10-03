@@ -1,24 +1,25 @@
-import { applyMiddleware, compose, createStore, combineReducers } from 'redux'
-import { syncHistoryWithStore, routerReducer as router } from 'react-router-redux'
+import { applyMiddleware, compose, createStore } from 'redux'
+import { syncHistoryWithStore } from 'react-router-redux'
+import Immutable from 'immutable'
+import thunkMiddleware from 'redux-thunk'
+import createLogger from 'redux-logger'
+const loggerMiddleware = createLogger()
 
-export const StoreModule = (initialState = {}) => {
+export const StoreModule = (initialState = InitialState) => {
   return {
     init : (ctx) => {
-      console.log('Initialize Store...')
+      console.log('Initialize Store... ' + initialState)
       ctx.reducers = []
-      ctx.middlewares = []
+      ctx.middlewares = [thunkMiddleware, loggerMiddleware]
       ctx.enhancers = []
-      ctx.reduce = (...reducer) => { ctx.reducers = [...ctx.reducers, ...reducer] }
+      ctx.reduce = (reducer) => { ctx.reducers = [...ctx.reducers, reducer] }
       ctx.enhance = (...enhancer) => { ctx.enhancers = [...ctx.enhancers, ...enhancer] }
-
       ctx.reload = () => {
-        ctx.store.replaceReducer(combineReducers(...ctx.reducers))
+        ctx.store.replaceReducer(require('./reduce').default(ctx))
       }
     },
     run : (ctx) => {
       console.log('Run Store...')
-      console.log(...ctx.reducers)
-      console.log(router)
       ctx.store = createStore(
         require('./reduce').default(ctx),
         initialState,
@@ -27,8 +28,12 @@ export const StoreModule = (initialState = {}) => {
           ...ctx.enhancers
         ))
 
+      ctx.store.addReducer = (r) => {
+        ctx.reduce(r)
+      }
+
       ctx.history = syncHistoryWithStore(ctx.browserHistory, ctx.store, {
-        selectLocationState : (state) => state.router
+        selectLocationState : (state) => state.get('router').toJS()
       })
 
       if (module.hot) {
@@ -40,5 +45,7 @@ export const StoreModule = (initialState = {}) => {
     }
   }
 }
+
+const InitialState = Immutable.fromJS({ locationBeforeTransitions: null })
 
 export default StoreModule

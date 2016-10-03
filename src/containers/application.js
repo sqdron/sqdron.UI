@@ -3,8 +3,8 @@ import { Router } from 'react-router'
 import { Provider } from 'react-redux'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import _ from 'lodash'
-import * as Colors from 'material-ui/styles/colors'
-import * as ColorManipulator from 'material-ui/utils/colorManipulator'
+// import * as Colors from 'material-ui/styles/colors'
+// import * as ColorManipulator from 'material-ui/utils/colorManipulator'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
 const muiTheme = getMuiTheme({
@@ -34,7 +34,6 @@ class Application extends Component {
 
   render () {
     const { history, store, routes, assets } = this.props
-    console.log(routes)
     var renderAssets = ''
     if (assets) {
       renderAssets = _.reduce(assets, (res, value) => {

@@ -61,7 +61,8 @@ const config = {
     'webpack-material-design-icons',
     'material-ui',
     'material-design-icons',
-    'flexboxgrid'
+    'flexboxgrid',
+    ''
   ],
   // ----------------------------------
   // Test Configuration

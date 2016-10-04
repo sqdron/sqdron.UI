@@ -20,17 +20,7 @@
     "__BASENAME__" : false
   },
   "rules": {
-    "key-spacing" : [2, {
-      "singleLine" : {
-        "beforeColon" : false,
-        "afterColon"  : true
-      },
-      "multiLine" : {
-        "align"       : "colon",
-        "beforeColon" : true,
-        "afterColon"  : true
-      }
-    }],
+    "key-spacing" : [0],
     "space-before-function-paren"  : 0,
     "babel/generator-star-spacing" : 1,
     "generator-star-spacing"       : 0,

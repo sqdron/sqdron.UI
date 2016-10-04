@@ -40,6 +40,8 @@ class SourceProviders extends React.Component {
   handleClick () {
     console.log(this.props)
     this.props.dispatch(A.GithubSignin({}))
+      // .then()
+      // .catch(() => {})
         // .then(this.props.next)
         // .catch(() => {})
   }

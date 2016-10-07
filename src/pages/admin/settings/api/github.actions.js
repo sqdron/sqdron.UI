@@ -33,7 +33,6 @@ function authenticate() {
   window.open(url, '_blank', null, null)
 }
 
-
 // function listenForCredentials(endpointKey, popup, provider, resolve, reject) {
 //   if (!resolve) {
 //     return new Promise((resolve, reject) => {

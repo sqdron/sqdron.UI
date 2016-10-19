@@ -16,6 +16,8 @@ node_modules/
 dist/
 coverage/*
 
+*.config
+
 # Sensitive or high-churn files:
 .idea/dataSources.ids
 .idea/dataSources.xml

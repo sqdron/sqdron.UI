@@ -20,7 +20,7 @@ body {
 }
 
 .main-container {
-/ / background: var(--c-primary) none repeat scroll 0 0;
+    background: var(--c-primary) none repeat scroll 0 0;
     color: #fff;
     fill: #fff;
     height: 100vh;

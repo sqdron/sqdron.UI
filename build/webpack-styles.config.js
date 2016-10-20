@@ -63,13 +63,13 @@ export default (webpackConfig, config) => {
     ]
   }
 
-  // if (!__DEV__) {
-  webpackConfig.plugins.push(
+  if (!__DEV__) {
+    webpackConfig.plugins.push(
       new ExtractTextPlugin('[name].[contenthash].css', {
         allChunks : true
       })
     )
-  // }
+  }
 
   return webpackConfig
 }

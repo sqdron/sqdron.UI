@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './styles.pcss'
+import Signup from './signup'
 
 export default () => (
   <div id='section-0' className={styles.section0}>
@@ -7,23 +8,21 @@ export default () => (
       <div className='carousel'>
         <div className='container '>
           <div className='row'>
-            <div className='col-md-12'>
+            <div className='col-md-7'>
               <div className='caption'>
                 <h1 className='text-white text-bold'>
-                  Professional
+                  Sqdron
                   <br/>
-                  Software Development
+                  Build & Deploy
                   <br/>
-                  For Your Business
+                  Scalable Micro Services
                 </h1>
                 <p className='text-white'>
-                  Delivering custom web software solutions.
+                  Any cloud, Any Host, no more limits for cluster size
                 </p>
               </div>
-              <div className='image hidden-sm hidden-xs'>
-                <img src='../assets/images/laptop.png' alt=''/>
-              </div>
             </div>
+            <Signup/>
           </div>
         </div>
       </div>

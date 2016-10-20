@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 // import './header.pcss'
 
 const Header = ({ minimized }) => (
@@ -10,7 +11,7 @@ const Header = ({ minimized }) => (
           <span className='sr-only'>Toggle navigation</span> <i className='fa fa-bars'/>
         </a>
         <a href='index.html' className='navbar-brand'>
-          <img src={require('../../../../assets/images/logo.png')} alt='sqdron'/>
+          <img src={require('../../../../assets/images/logo_long.png')} alt='sqdron'/>
         </a>
       </div>
       <div className='collapse navbar-collapse' id='landing-navbar-collapse'>
@@ -25,7 +26,7 @@ const Header = ({ minimized }) => (
             <a className='page-scroll' href='#section-3'>Team</a>
           </li>
           <li>
-            <a className='page-scroll' href='#section-5'>Contact</a>
+            <Link to='/login' >Login to sqdron</Link>
           </li>
         </ul>
       </div>

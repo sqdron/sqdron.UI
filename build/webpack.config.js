@@ -4,7 +4,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import config from '../config'
 import _debug from 'debug'
-const HtmlElementsPlugin = require('./html-elements-plugin')
 
 const debug = _debug('app:webpack:config')
 const paths = config.utils_paths
@@ -63,9 +62,6 @@ webpackConfig.plugins = [
       collapseWhitespace : true
     }
   }),
-  new HtmlElementsPlugin({
-    headTags : require('./webpack-head')
-  }),
   new webpack.ProvidePlugin({
     $               : 'jquery',
     jQuery          : 'jquery',
@@ -115,7 +111,7 @@ webpackConfig.module.loaders = [{
   query   : {
     cacheDirectory : true,
     plugins        : ['transform-runtime', 'lodash'],
-    presets        : ['es2015', 'react', 'stage-0']
+    presets        : ['es2015', 'react', 'stage-2']
   }
 },
 {

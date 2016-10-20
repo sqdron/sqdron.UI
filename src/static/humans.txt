@@ -1,9 +1,14 @@
-# Check it out: http://humanstxt.org/
+/* TEAM */
+    Your title: Denis Korkhov
+	Facebook: https://www.facebook.com/denis.korkhov
+	Site: www.sqdron.com
+	Location: Belarus, Minsk
 
-# TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+/* SITE */
+	Last update: 2016/10/20
+	Language: English, Russian
+	Standards: HTML5, CSS3
+	Components: React, Redux, Bootstrap, Material.
+	IDE: WebStorm
+	Hosted on: Docker

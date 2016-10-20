@@ -1,16 +1,16 @@
 import React from 'react'
-import './header.pcss'
+// import './header.pcss'
 
 const Header = ({ minimized }) => (
-  <nav id='mainNav' className='navbar navbar-default navbar-custom' data-spy='affix' data-offset-top='100'>
+  <nav id='mainNav' className='navbar navbar-default navbar-custom' data-spy='affix' data-offset-top='50'>
     <div className='container'>
       <div className='navbar-header page-scroll'>
-        <a className='landing-menu-toggler btn btn-red hidden-sm hidden-md hidden-lg mobile-button navbar-toggle'
+        <a className='landing-menu-toggler btn hidden-sm hidden-md hidden-lg mobile-button navbar-toggle'
           data-toggle='collapse' data-target='#landing-navbar-collapse'>
           <span className='sr-only'>Toggle navigation</span> <i className='fa fa-bars'/>
         </a>
         <a href='index.html' className='navbar-brand'>
-          <img src='../assets/images/logo.png' alt='Clip-Two'/>
+          <img src={require('../../../../assets/images/logo.png')} alt='sqdron'/>
         </a>
       </div>
       <div className='collapse navbar-collapse' id='landing-navbar-collapse'>

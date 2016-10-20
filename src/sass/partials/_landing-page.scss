@@ -18,17 +18,38 @@
         }
 
         @media (max-width: $screen-sm-max) {
-            background: $black;
+            height: 40px;
+            line-height: 40px;
+            background: rgba(255, 255, 255, 0.4);
+            .navbar-header{
+                height: 40px;
+                line-height: 40px;
+            }
+            .navbar-brand {
+                height: 40px;
+                line-height: 40px;
+                img {
+                    max-width: 70px !important;
+                }
+            }
+            .navbar-nav {
+                > li {
+                    > a {
+                        line-height: 40px;
+                    }
+                }
 
-            > .container {
-                width: auto !important;
+                > li.active {
+                    > a {
+                        color: $red;
+                    }
+                }
             }
         }
 
         .navbar-header {
             position: relative !important;
             background: transparent !important;
-            height: auto;
             border: none;
             width: auto !important;
             box-shadow: none !important;
@@ -36,7 +57,7 @@
             .navbar-brand {
                 opacity: 1 !important;
                 top: 0 !important;
-                
+
                 @media (min-width: $screen-md-min) {
                     @include transition(all 0.5s);
 
@@ -64,25 +85,57 @@
             }
         }
 
-        .navbar-toggle{
+        .navbar-toggle {
             height: auto !important;
             border: none;
             line-height: normal !important;
             position: absolute;
             left: 15px;
-            top: 15px;
+            top: 12px;
             margin: 0;
+            padding: 0;
+            color: white;
+            &:hover {
+                background: none;
+                color: red;
+            }
         }
 
         .navbar-collapse {
             position: relative !important;
             background: transparent !important;
-            height: auto;
             border: none !important;
             box-shadow: none !important;
 
+            //height: 40px !important;
             @media (min-width: $screen-sm-min) {
                 margin: 0;
+            }
+
+            &.collapsing {
+                .navbar-right {
+                    background: rgba(255, 255, 255, 0.4);
+                }
+            }
+
+            @media (max-width: $screen-xs-max) {
+
+                &.collapse {
+                    .navbar-right {
+                        background: rgba(255, 255, 255, 0.4);
+                    }
+                }
+
+                li {
+                    > a {
+                        background: transparent !important;
+                        color: #58748b !important;
+                        &:hover {
+                            color: red !important;
+                        }
+                    }
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+                }
             }
 
             .nav {
@@ -128,7 +181,7 @@
             }
 
             @media (max-width: $screen-xs-max) {
-                background: $black !important;
+                //background: rgba(255, 255, 255, 0.4);
 
                 .nav {
                     margin: 0;
@@ -150,38 +203,37 @@
         }
 
         &.affix {
-            @media (min-width: $screen-md-min) {
+            //@media (min-width: $screen-md-min) {
+            background: rgba(255, 255, 255, 0.4);
+            height: 40px;
+            line-height: 40px;
+            .navbar-header{
                 height: 40px;
                 line-height: 40px;
-                background: $black;
+            }
+            .navbar-brand {
+                height: 40px;
+                line-height: 40px;
 
-                .navbar-header, .navbar-collapse {
-                    height: 40px !important;
+                img {
+                    max-width: 70px !important;
                 }
+            }
 
-                .navbar-brand {
-                    height: 40px;
-                    line-height: 40px;
-
-                    img {
-                        max-width: 70px !important;
+            .navbar-nav {
+                > li {
+                    > a {
+                        line-height: 40px;
                     }
                 }
 
-                .navbar-nav {
-                    > li {
-                        > a {
-                            line-height: 40px;
-                        }
-                    }
-
-                    > li.active {
-                        > a {
-                            color: $red;
-                        }
+                > li.active {
+                    > a {
+                        color: $red;
                     }
                 }
             }
+            //}
         }
     }
 
@@ -194,23 +246,23 @@
                 margin-top: - $header-height;
             }
         }
-        
+
         .carousel {
             height: 470px;
             width: 100%;
             position: relative;
             margin-bottom: 0 !important;
-    
+
             .slick-list {
                 overflow: visible;
             }
-    
+
             .slick-slide {
                 height: 470px;
                 background-size: cover !important;
                 background-position: center center !important;
             }
-    
+
             .caption {
                 position: absolute;
                 top: 130px;
@@ -219,19 +271,18 @@
                 right: auto;
                 text-align: left;
             }
-    
+
             .image {
                 position: absolute;
                 right: 10px;
                 top: 135px;
             }
-    
+
             .slick-dots {
                 bottom: 0 !important;
             }
         }
     }
-
 
     //.slide-2 {
     //    background: url('../assets/images/carousel/carousel002.jpg')
@@ -265,7 +316,7 @@
             padding-top: 15px;
             padding-bottom: 15px;
         }
-        .col-md-4  {
+        .col-md-4 {
             & > * {
                 text-align: center;
             }

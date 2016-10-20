@@ -20,7 +20,7 @@
         @media (max-width: $screen-sm-max) {
             height: 40px;
             line-height: 40px;
-            background: rgba(255, 255, 255, 0.4);
+            background: #91D6FB;
             .navbar-header{
                 height: 40px;
                 line-height: 40px;
@@ -74,14 +74,6 @@
                 .navbar-brand {
                     float: none;
                 }
-
-                //.landing-menu-toggler {
-                //    height: auto !important;
-                //    line-height: normal !important;
-                //    position: absolute;
-                //    left: 15px;
-                //    top: 15px;
-                //}
             }
         }
 
@@ -114,7 +106,7 @@
 
             &.collapsing {
                 .navbar-right {
-                    background: rgba(255, 255, 255, 0.4);
+                    background: #91D6FB;
                 }
             }
 
@@ -122,7 +114,7 @@
 
                 &.collapse {
                     .navbar-right {
-                        background: rgba(255, 255, 255, 0.4);
+                        background: #91D6FB;
                     }
                 }
 
@@ -204,7 +196,7 @@
 
         &.affix {
             //@media (min-width: $screen-md-min) {
-            background: rgba(255, 255, 255, 0.4);
+            background: #91D6FB;
             height: 40px;
             line-height: 40px;
             .navbar-header{
@@ -232,93 +224,6 @@
                         color: $red;
                     }
                 }
-            }
-            //}
-        }
-    }
-
-    .landing-content {
-        height: 470px;
-        margin-top: - $header-height;
-
-        @media (min-width: $screen-md-min) {
-            .app-navbar-fixed & {
-                margin-top: - $header-height;
-            }
-        }
-
-        .carousel {
-            height: 470px;
-            width: 100%;
-            position: relative;
-            margin-bottom: 0 !important;
-
-            .slick-list {
-                overflow: visible;
-            }
-
-            .slick-slide {
-                height: 470px;
-                background-size: cover !important;
-                background-position: center center !important;
-            }
-
-            .caption {
-                position: absolute;
-                top: 130px;
-                left: 15px;
-                bottom: auto;
-                right: auto;
-                text-align: left;
-            }
-
-            .image {
-                position: absolute;
-                right: 10px;
-                top: 135px;
-            }
-
-            .slick-dots {
-                bottom: 0 !important;
-            }
-        }
-    }
-
-    //.slide-2 {
-    //    background: url('../assets/images/carousel/carousel002.jpg')
-    //}
-
-    .section-features {
-        //background-image: url("../assets/images/section_features.png");
-        background-repeat: no-repeat;
-        background-position: center bottom;
-    }
-
-    .section-testimonials {
-        //background-image: url("../assets/images/section_testimonials.jpg") !important;
-        background-repeat: no-repeat !important;
-        background-position: center bottom !important;
-        padding-bottom: 250px !important;
-    }
-
-    .testimonial-thumb {
-        margin: 0 auto;
-        max-width: 80px;
-    }
-
-    .section-contact {
-        //background-image: url("../assets/images/word_map.png");
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        margin-top: 60px;
-
-        .block {
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
-        .col-md-4 {
-            & > * {
-                text-align: center;
             }
         }
     }

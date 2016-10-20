@@ -22,6 +22,7 @@
   "rules": {
     "key-spacing" : [0],
     "space-before-function-paren"  : 0,
+    "no-trailing-spaces"           : 0,
     "babel/generator-star-spacing" : 1,
     "generator-star-spacing"       : 0,
     "jsx-quotes"                   : [2, "prefer-single"],

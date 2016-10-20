@@ -9,21 +9,21 @@ import githubReducer from './api/github.reducers'
 import * as A from './api/github.actions'
 
 const styles = {
-  width   : '100%',
-  margin  : '20px 0',
+  width : '100%',
+  margin : '20px 0',
   padding : 10,
-  button  : {
+  button : {
     margin : 12
   },
   exampleImageInput : {
-    cursor   : 'pointer',
+    cursor : 'pointer',
     position : 'absolute',
-    top      : 0,
-    bottom   : 0,
-    right    : 0,
-    left     : 0,
-    width    : '100%',
-    opacity  : 0
+    top : 0,
+    bottom : 0,
+    right : 0,
+    left : 0,
+    width : '100%',
+    opacity : 0
   }
 }
 
@@ -32,7 +32,7 @@ class SourceProviders extends React.Component {
     dispatch : React.PropTypes.func.isRequired
   }
 
-  constructor(props, context) {
+  constructor (props, context) {
     super(props, context)
     this.context.store.addReducer(githubReducer)
   }
@@ -40,20 +40,20 @@ class SourceProviders extends React.Component {
   handleClick () {
     console.log(this.props)
     this.props.dispatch(A.GithubSignin({}))
-      // .then()
-      // .catch(() => {})
-        // .then(this.props.next)
-        // .catch(() => {})
+    // .then()
+    // .catch(() => {})
+    // .then(this.props.next)
+    // .catch(() => {})
   }
 
-  render() {
+  render () {
     return (
       <Paper style={styles} zDepth={1}>
         <RaisedButton
           label='Add Github'
           primary
           style={styles.button}
-          onClick={this.handleClick.bind(this)}
+          onClick={this.handleClick}
           icon={<FontIcon className='fa fa-github'/>}/>
         <RaisedButton
           label='Add Bitbucket'

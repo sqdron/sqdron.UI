@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './signupLayout.css'
-import '../../styles/core.css'
+// import '../../styles/core.css'
 
 export const Master = ({ children }) => (
   <div className='container text-center'>

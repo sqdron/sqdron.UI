@@ -13,12 +13,22 @@ export default (webpackConfig, config) => {
   }
 
   webpackConfig.module.loaders.push({
+    test    : /\.(css)$/,
+    loaders : [
+      'style',
+      CSS_LOADER
+    ],
+    include: /node_modules/
+  })
+
+  webpackConfig.module.loaders.push({
     test    : /\.(css|pcss)$/,
     loaders : [
       'style',
       CSS_LOADER,
       'postcss'
-    ]
+    ],
+    exclude: /node_modules/
   })
 
   webpackConfig.module.loaders.push({
@@ -26,7 +36,7 @@ export default (webpackConfig, config) => {
     loaders : [
       'style',
       CSS_LOADER,
-      'postcss',
+      // 'postcss',
       'sass'
     ]
   })
@@ -53,13 +63,13 @@ export default (webpackConfig, config) => {
     ]
   }
 
-  if (!__DEV__) {
-    webpackConfig.plugins.push(
+  // if (!__DEV__) {
+  webpackConfig.plugins.push(
       new ExtractTextPlugin('[name].[contenthash].css', {
         allChunks : true
       })
     )
-  }
+  // }
 
   return webpackConfig
 }

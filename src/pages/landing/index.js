@@ -27,7 +27,7 @@ class Landing extends Component {
 
   render () {
     return (
-      <div>
+      <div className='landing-page'>
         <Header minimized={this.state.minimizedBar}/>
         <Section0/>
         <Section1/>

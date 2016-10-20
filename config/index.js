@@ -44,25 +44,6 @@ const config = {
     colors : true
   },
   compiler_vendor : [
-    'jquery',
-    'tether',
-    'bootstrap',
-    'history',
-    'react',
-    'react-dom',
-    'react-redux',
-    'react-router',
-    'react-router-redux',
-    'react-tap-event-plugin',
-    'redux',
-    'redux-thunk',
-    'history',
-    'lodash',
-    'webpack-material-design-icons',
-    'material-ui',
-    'material-design-icons',
-    'flexboxgrid',
-    ''
   ],
   // ----------------------------------
   // Test Configuration

@@ -28,11 +28,15 @@ const APP_ENTRY_PATHS = [
   paths.client('index.js')
 ]
 
+const VENDOR_ENTRY_PATHS = [
+  paths.client('vendor.js')
+]
+
 webpackConfig.entry = {
   app : __DEV__
     ? APP_ENTRY_PATHS.concat(`webpack-hot-middleware/client?path=${config.compiler_public_path}__webpack_hmr`)
     : APP_ENTRY_PATHS,
-  vendor : config.compiler_vendor
+  vendor : VENDOR_ENTRY_PATHS
 }
 
 // ------------------------------------
@@ -139,7 +143,7 @@ require('./webpack-styles.config').default(webpackConfig, config)
 // when we don't know the public path (we know it only when HMR is enabled [in development]) we
 // need to use the extractTextPlugin to fix this issue:
 // http://stackoverflow.com/questions/34133808/webpack-ots-parsing-error-loading-fonts/34133809#34133809
-if (!__DEV__) {
+// if (!__DEV__) {
   debug('accept ExtractTextPlugin to CSS loaders.')
   webpackConfig.module.loaders.filter((loader) =>
     loader.loaders && loader.loaders.find((name) => /css/.test(name.split('?')[0]))
@@ -148,7 +152,7 @@ if (!__DEV__) {
     loader.loader = ExtractTextPlugin.extract(first, rest.join('!'))
     Reflect.deleteProperty(loader, 'loaders')
   })
-}
+// }
 
 
 

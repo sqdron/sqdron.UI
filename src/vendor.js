@@ -1,6 +1,23 @@
-import 'tether/dist/js/tether.min.js'
-import 'jquery/dist/jquery.min.js'
+require('jquery')
+require('tether')
+require('bootstrap')
+require('immutable')
+require('classnames')
 
-import 'bootstrap/dist/js/bootstrap.min.js'
+require('react')
+require('react-dom')
+require('react-redux')
+require('react-router')
+require('react-router-redux')
+// require('react-tap-event-plugin')
+require('redux')
+require('redux-thunk')
+require('history')
 
-import 'font-awesome/css/font-awesome.min.css'
+require('lodash')
+require('webpack-material-design-icons')
+// require('material-ui')
+
+require('flexboxgrid')
+
+require('./sass/styles.scss')

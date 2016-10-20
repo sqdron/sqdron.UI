@@ -1,11 +1,14 @@
 import React from 'react'
-import { AppBar, MenuItem, Drawer } from 'material-ui'
+
 import { Link } from 'react-router'
 import Dashboard from 'material-ui/svg-icons/action/dashboard'
 import Folder from 'material-ui/svg-icons/file/folder-open'
 import Applications from 'material-ui/svg-icons/hardware/developer-board'
 import Storage from 'material-ui/svg-icons/device/storage'
 import Settings from 'material-ui/svg-icons/action/settings'
+import AppBar from 'material-ui/AppBar'
+import MenuItem from 'material-ui/MenuItem'
+import Drawer from 'material-ui/Drawer'
 
 export Repository from './repository'
 export Dashboard from './dashboard'

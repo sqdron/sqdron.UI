@@ -31,11 +31,16 @@ const VENDOR_ENTRY_PATHS = [
   paths.client('vendor.js')
 ]
 
+const TEMPLATE_ENTRY_PATHS = [
+  paths.client('templates/index.js')
+]
+
 webpackConfig.entry = {
   app : __DEV__
     ? APP_ENTRY_PATHS.concat(`webpack-hot-middleware/client?path=${config.compiler_public_path}__webpack_hmr`)
     : APP_ENTRY_PATHS,
-  vendor : VENDOR_ENTRY_PATHS
+  vendor : VENDOR_ENTRY_PATHS,
+  templates : TEMPLATE_ENTRY_PATHS
 }
 
 // ------------------------------------
@@ -60,7 +65,8 @@ webpackConfig.plugins = [
     inject   : 'body',
     minify   : {
       collapseWhitespace : true
-    }
+    },
+    excludeChunks: ['templates']
   }),
   new webpack.ProvidePlugin({
     $               : 'jquery',
@@ -150,6 +156,7 @@ if (!__DEV__) {
   })
 }
 
+require('./webpack-templates.config').default(webpackConfig, config)
 
 
 export default webpackConfig

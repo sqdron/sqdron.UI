@@ -36,7 +36,6 @@ export default (webpackConfig, config) => {
     loaders : [
       'style',
       CSS_LOADER,
-      // 'postcss',
       'sass'
     ]
   })

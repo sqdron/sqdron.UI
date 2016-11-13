@@ -3,6 +3,7 @@ import path from 'path'
 import _debug from 'debug'
 import { argv } from 'yargs'
 import ip from 'ip'
+import appConfig from './app.json'
 // const appCpnfig = require('app.config')
 
 const localip = ip.address()
@@ -29,9 +30,6 @@ const config = {
   // ----------------------------------
   server_host : localip, // use string 'localhost' to prevent exposure on local network
   server_port : process.env.PORT || 3000,
-
-  api_host : '',
-
   // ----------------------------------
   // Compiler Configuration
   // ----------------------------------
@@ -81,7 +79,7 @@ config.globals = {
   '__DEBUG__'    : config.env === 'development' && !argv.no_debug,
   '__COVERAGE__' : !argv.watch && config.env === 'test',
   '__BASENAME__' : JSON.stringify(process.env.BASENAME || ''),
-  'BACKEND_API'  : ''
+  'BACKEND_API'  : JSON.stringify(appConfig.api)
 }
 
 // ------------------------------------

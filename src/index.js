@@ -26,6 +26,4 @@ app.use(HotModule((ctx) => {
   }
 }))
 
-console.log(BACKEND_API)
-
 app.run()
